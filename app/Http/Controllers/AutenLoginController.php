@@ -37,9 +37,9 @@ class AutenLoginController extends Controller
             session(['nombre_usuario' => $request->usuario]);
 
             if ($inParametro == '1'){
-                return redirect()->route('cobroVentas')->with('success', 'Inicio de sesión exitoso.');
-            }else {
                 return view('paginaMantenimiento');
+            }else {
+                return redirect()->route('cobroVentas')->with('success', 'Inicio de sesión exitoso.');
             }
            
             
