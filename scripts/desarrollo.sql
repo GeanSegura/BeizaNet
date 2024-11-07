@@ -116,7 +116,6 @@ insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('LA MERCE
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('OXAPAMPA', 504);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('SAN RAMON', 504);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('TARMA L', 504);
-insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('TARMA L', 504);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('TARMA M', 504);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('TARMA V', 504);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('VILLARICA', 504);
@@ -148,7 +147,6 @@ insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('CHUPACA'
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('COLCABAMBA', 508);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUAMANCACA', 508);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUANCAYO SUR 1', 508);
-insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUANCAYO SUR 1', 508);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUANCAYO SUR 2', 508);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUANCAYOSUR 2', 508);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUARI', 508);
@@ -162,7 +160,6 @@ insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('HUANCAYO
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('REPRES. EL TAMBO', 600);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('REPRESENTANTES', 600);
 
-insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('PUCALLPA 1 ANDY', 513);
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('PUCALLPA 1 ANDY', 513);
 
 insert into usuarios_zonas (vc_nombre_zona, in_usuario_codigo) values ('CONCEPCION', 505);

@@ -26,12 +26,22 @@ class AutenLoginController extends Controller
 
         $valorRetornado = $result[0];
 
+        $resultParametro = DB::select('CALL sp_obtener_parametro(?)', [1]);
+
+        $inParametro = $resultParametro[0];
+
      
         
         if ($valorRetornado <> '0'){
             session(['codigo_usuario' => $valorRetornado]);
             session(['nombre_usuario' => $request->usuario]);
-            return redirect()->route('cobroVentas')->with('success', 'Inicio de sesión exitoso.');
+
+            if ($inParametro == '1'){
+                return redirect()->route('cobroVentas')->with('success', 'Inicio de sesión exitoso.');
+            }else {
+                return view('paginaMantenimiento');
+            }
+           
             
         }
         // if (!empty($user)) {
