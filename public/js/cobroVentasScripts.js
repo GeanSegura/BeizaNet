@@ -20,7 +20,7 @@ $(document).on('click', '.zona-link', function(e) {
                 row.append('<td><span>' + cuenta.vc_razon_social_cuenta + '</span></td>');
                 row.append('<td><span>' + cuenta.vc_nombre_cuenta + '</span></td>');
                 row.append('<td><span>' + cuenta.de_limite_credito + '</span></td>');
-                row.append('<td><span>0.00</span></td>');
+                row.append('<td><span>'+ cuenta.de_vencidas_cuenta +'</span></td>');
                 row.append('<td><span>0.00</span></td>');
                 row.append('<td><span>' + cuenta.vc_saldo_cuenta + '</span></td>');
                 tbody.append(row); 
