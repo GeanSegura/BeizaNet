@@ -252,13 +252,13 @@
                         <div class="cabecera-left">
 
                             <label>Emisión</label>
-                            <input class="ipt" type="text" readonly value="2024-02-29">
+                            <input id="emision" class="ipt" type="text" readonly >
              
                             <label>Forma de pago</label>
-                            <input class="ipt" type="text" readonly value="FACTURA 30 DÍAS">
+                            <input id="forma-pago" class="ipt" type="text" readonly >
 
                             <label>Documento</label>
-                            <input class="ipt" type="text" value="01/F101-00079389">
+                            <input id="documento" class="ipt" type="text" readonly >
                            
                             
                         </div>
@@ -266,13 +266,13 @@
                         <div class="cabecera-right">
                             
                                 <label>RUC</label>
-                                <input class="ipt" type="text" value="">
+                                <input id="ruc" class="ipt" type="text" readonly>
                  
                                 <label>Cliente</label>
-                                <input  class="ipt" type="text" value="MIGUEL POMAREDA LIZARRAGA">
+                                <input id="cliente" class="ipt" type="text" readonly>
 
                                 <label>Dirección</label>
-                                <input class="ipt"  type="text" value="AV. DANIEL ALCIDES CARRION N 1345">
+                                <input id="direccion" class="ipt"  type="text" readonly >
                        
                         </div>
 
@@ -300,13 +300,13 @@
 
                         <div> 
                             <label>V.V.</label>
-                            <input class="ipt" type="text" value="">
+                            <input id="vv" class="ipt" type="text" readonly >
             
                             <label>I.G.V.</label>
-                            <input class="ipt" type="text">
+                            <input id="igv" class="ipt" type="text" readonly>
 
                             <label class="lbl lbl-total">TOTAL</label>
-                            <input class="ipt" type="text" value="12.1">
+                            <input id="total-documento" class="ipt" type="text" readonly >
                         </div>
 
                     </div>

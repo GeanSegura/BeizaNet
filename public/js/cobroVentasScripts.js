@@ -100,7 +100,15 @@ $(document).on('click', '.cargar-documento-detalle', function(e) {
                     tbody.append(row); 
                     var firstData = response.data[0]; 
 
-                    $('#ipt').val(firstData.campo1); 
+                    $('#emision').val(firstData.dt_emision); 
+                    $('#forma-pago').val(firstData.vc_forma_pago); 
+                    $('#documento').val(firstData.vc_codigo_documento); 
+                    $('#ruc').val(firstData.vc_ruc); 
+                    $('#cliente').val(firstData.vc_nombre_cliente); 
+                    $('#direccion').val(firstData.vc_direccion); 
+                    $('#vv').val(firstData.de_valor_venta); 
+                    $('#igv').val(firstData.de_IGV); 
+                    $('#total-documento').val(firstData.de_total_documento); 
                 });
             } else {
                 tbody.append('<tr><td colspan="7">error al cargar el detalle</td></tr>');
