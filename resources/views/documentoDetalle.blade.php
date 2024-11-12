@@ -288,21 +288,10 @@
                                 <th>Sub linea</th>
                                 <th>P.unitario</th>
                                 <th>Total</th>
-                                <th>Can.Devo</th>
-                                <th>Impo.Devo</th>
 
                             </tr>
 
-                            <tr>
-                                <td>1</td>
-                                <td>10</td>
-                                <td></td>
-                                <td></td>
-                                <td>-</td>
-                                <td>10</td>
-                                <td>20</td>
-                                <td>1</td>
-                            </tr>
+                            <tbody id="documentos-detalle-tbody"></tbody>
 
                         </table>
                     </div>

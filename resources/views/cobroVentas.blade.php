@@ -606,7 +606,6 @@
     <div id="contenidoGaf" style="display: none;">
 
     </div>
-    <button id="cerrar-documento-detalle">Cerrar</button>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('js/cobroVentasScripts.js') }}"></script>

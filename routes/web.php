@@ -35,7 +35,7 @@ Route::get('/', function () {
 
 Route::get('/cobro-ventas/{zona}', [CobroVentasController::class, 'obtenerDatosZona'])->name('cuenta.zona');
 Route::get('/cobro-ventas/documento/{cuenta}', [CobroVentasController::class, 'obtenerDatosDocumento'])->name('documento.zona');
-Route::get('/cobro-ventas/detalle/{}', [CobroVentasController::class, 'obtenerDocumentoDetalle'])->name('documento.detalle');
+Route::get('/cobro-ventas/detalle/{documento}', [CobroVentasController::class, 'obtenerDocumentoDetalle'])->name('documento.detalle');
 
 
 

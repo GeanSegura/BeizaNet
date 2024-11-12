@@ -42,14 +42,23 @@ class CobroVentasController extends Controller
         $p_codigo_usuario = $codigo_usuario->in_codigo_usuario;
         $codigo_zona = session('codigo-zona');
         $p_condigo_zona =$codigo_zona;
+        session(['codigo-cuenta' => $cuenta]);
 
         $documentos = DB::select('CALL sp_obtener_documentos_cuenta(?,?,?)', [$p_codigo_usuario,$p_condigo_zona,$cuenta]);
         return response()->json($documentos);
     }
 
-    public function obtenerDocumentoDetalle(){
+    public function obtenerDocumentoDetalle($documento){
+        $codigo_cuenta = session('codigo-cuenta');
+
+        $documentos_detalle = DB::select('CALL sp_obtener_documentos_detalle(?,?)', [$documento,$codigo_cuenta]);
+
         $html = view('documentoDetalle')->render(); // Renderiza la vista como HTML
-        return response()->json(['html' => $html]);
+        // return response()->json(['html' => $html]);
+        return response()->json([
+            'html' => $html,
+            'data' => $documentos_detalle,
+        ]);
     }
 
     public function salir() {

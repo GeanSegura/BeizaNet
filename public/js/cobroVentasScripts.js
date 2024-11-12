@@ -50,7 +50,7 @@ $(document).on('click', '.cuenta-link', function(e) {
         if (Array.isArray(response) && response.length > 0) {
             response.forEach(function(documentos) {
                 var row = $('<tr>');
-                row.append( '<td><a href="javascript:void(0);" class="cargar-documento-detalle" >' 
+                row.append( '<td><a href="javascript:void(0);" class="cargar-documento-detalle" data-documento="' + documentos.vc_documento + '">'
                     + documentos.vc_documento + '</a></td>');
                 row.append('<td><span>' + documentos.dt_emision + '</span></td>');
                 row.append('<td><span>' + documentos.de_importe + '</span></td>');
@@ -71,17 +71,41 @@ $(document).on('click', '.cuenta-link', function(e) {
 });
 
 $(document).on('click', '.cargar-documento-detalle', function(e) {
-    console.log('ingeso')
     e.preventDefault(); // Evita que el enlace recargue la página
 
+    var documento = $(this).data('documento'); 
+    console.log(documento)
+
         $.ajax({
-            url: `/cobro-ventas/detalle/{}`, 
+            url: `/cobro-ventas/detalle/${documento}`, 
             type: 'GET',
         success: function(response) {
             console.log(response);
-            $('#contenidoGaf').html(response.html); // Carga el contenido de gaf.blade.php en el contenedor
+            $('#contenidoGaf').html(response.html); 
             $('#ocultar-cobro-ventas').hide();
-            $('#contenidoGaf').show(); // Muestra el contenedor
+            $('#contenidoGaf').show();
+            var tbody = $('#documentos-detalle-tbody');
+            tbody.empty(); 
+            if (Array.isArray(response.data) && response.data.length > 0) {
+                response.data.forEach(function(dataDocumentoDetalle) {
+                    var row = $('<tr>');
+                    row.append( '<td><span>'
+                        + dataDocumentoDetalle.in_id + '</span></td>');
+                    row.append('<td><span>' + dataDocumentoDetalle.in_cantidad + '</span></td>');
+                    row.append('<td><span>' + dataDocumentoDetalle.vc_unidad + '</span></td>');
+                    row.append('<td><span>' + dataDocumentoDetalle.vc_producto + '</span></td>');
+                    row.append('<td><span>'+dataDocumentoDetalle.vc_subLinea+'</span></td>');
+                    row.append('<td><span>'+dataDocumentoDetalle.de_precio_unitario+'</span></td>');
+                    row.append('<td><span>'+dataDocumentoDetalle.de_total+'</span></td>');
+                    tbody.append(row); 
+                    var firstData = response.data[0]; 
+
+                    $('#ipt').val(firstData.campo1); 
+                });
+            } else {
+                tbody.append('<tr><td colspan="7">error al cargar el detalle</td></tr>');
+            }
+
         },
         error: function(xhr) {
             console.log('Error:', xhr);
